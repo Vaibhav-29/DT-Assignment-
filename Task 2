@@ -1,0 +1,71 @@
+API Documentation:
+
+Object Data Model for Nudge:
+
+type: "nudge"
+uid: unique id of the user who created the nudge
+title: Title of the nudge
+image: Image file (File upload)
+time: (Date + time) Timestamp
+description: String
+icon: Image file (File upload)
+invitation: One line invitation for the nudge
+API Structure:
+
+Base URL: /api/v1/app
+API Endpoints:
+GET /nudges: Retrieve all the nudges created by the user
+GET /nudges/:id: Retrieve a particular nudge by its unique id
+POST /nudges: Create a new nudge and returns the Id of the nudge created
+PUT /nudges/:id: Update a particular nudge by its unique id
+DELETE /nudges/:id: Delete a particular nudge by its unique id
+Payload:
+POST /nudges and PUT /nudges/:id:
+uid: String (Required)
+title: String (Required)
+image: File (Required)
+time: Timestamp (Required)
+description: String (Required)
+icon: File (Required)
+invitation: String (Required)
+Description:
+GET /nudges: Gets all the nudges created by the user
+GET /nudges/:id: Gets a particular nudge by its unique id
+POST /nudges: Creates a new nudge with the provided payload and returns the Id of the nudge created
+PUT /nudges/:id: Updates the existing nudge with the provided payload based on its unique id
+DELETE /nudges/:id: Deletes the existing nudge based on its unique id
+CRUD Functionalities:
+
+GET /nudges: Retrieve all the nudges created by the user.
+Request Type: GET
+Base URL: /api/v1/app
+API Endpoint: /nudges
+Payload: N/A
+Description: Gets all the nudges created by the user.
+GET /nudges/:id: Retrieve a particular nudge by its unique id.
+Request Type: GET
+Base URL: /api/v1/app
+API Endpoint: /nudges/:id
+Payload: N/A
+Description: Gets a particular nudge by its unique id.
+POST /nudges: Create a new nudge and returns the Id of the nudge created.
+Request Type: POST
+Base URL: /api/v1/app
+API Endpoint: /nudges
+Payload:
+uid: String (Required)
+title: String (Required)
+image: File (Required)
+time: Timestamp (Required)
+description: String (Required)
+icon: File (Required)
+invitation: String (Required)
+Description: Creates a new nudge with the provided payload and returns the Id of the nudge created.
+PUT /nudges/:id: Update a particular nudge by its unique id.
+Request Type: PUT
+Base URL: /api/v1/app
+API Endpoint: /nudges/:id
+Payload:
+uid: String (Required)
+title: String (Required)
+image: File (Required)
